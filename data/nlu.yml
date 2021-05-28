@@ -1,0 +1,86 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    
+- intent: get_score
+  examples: |
+    - I want to know the result
+    - I want to know the score
+    - I wonder how the game ended
+    - What are the latest scores?
+    - NBA scores
+    - I'm thinking about an NBA game
+    - NBA
+    - Let's talk basketball
+    - I want to talk about hoops
+    
+- intent: get_stats_leaders
+  examples: |
+      - Stats leaders are interesting
+      - I wanna know stat leaders
+      - Tell me who led in stats
+      - Stats leaders
+      
+- intent: get_scorers
+  examples: |
+      - I wanna know how many points which player scored
+      - I'm interested in scorers today
+      - Points
+      - Points scored
+      - Scoring
+      - Tell me about scorers
+      - Tell me scoring leaders
+      
+- intent: get_assists
+  examples: |
+      - Who made most assists?
+      - Assists?
+      - Best passers
+      - Assist leaders
+      - Dimes
+      - Dimers
+      - Passing
+      - I'm wondering about passers
+      - AST
+      
+- intent: get_rebounds
+  examples: |
+      - I wanna know rebounds
+      - Rebounding is a particular thing I'm interested in
+      - Rebs
+      - Boards
+      - How many boards were collected and by whom?

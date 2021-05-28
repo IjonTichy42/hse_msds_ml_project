@@ -1,0 +1,58 @@
+version: "2.0"
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - get_score
+  - get_stats_leaders
+  - get_scorers
+  - get_assists
+  - get_rebounds
+
+responses:
+  utter_greet_and_offer:
+  - text: "Hi! What can I do for you?"
+
+  utter_ask_team_1:
+  - text: "Which team are you interested in?"
+  
+  utter_ask_team_2_needed:
+  - text: "Against a specific team?"
+  
+  utter_ask_team_2:
+  - text: "Against which opponent?"
+  
+  utter_ask_anything_else:
+  - text: "Anything else?"
+
+actions:
+  - action_team_latest_game
+  - action_latest_match_up
+  - action_get_stats_leaders
+  - action_get_scorers
+  - action_get_assists
+  - action_get_rebounds
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+forms:
+  team_1_form:
+    team_1:
+      - type: from_text
+  team_2_form:
+    team_2:
+      - type: from_text
+
+slots:
+  team_1:
+    type: text
+    influence_conversation: false
+  team_2:
+    type: text
+    influence_conversation: false
+  game_id:
+    type: text
+    influence_conversation: false

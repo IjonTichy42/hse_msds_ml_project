@@ -1,0 +1,9 @@
+version: "2.0"
+
+rules:
+
+- rule: activate team_1 form
+  steps:
+    - intent: get_score
+    - action: team_1_form
+    - active_loop: team_1_form

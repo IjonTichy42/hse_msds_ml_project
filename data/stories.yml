@@ -1,0 +1,69 @@
+version: "2.0"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet_and_offer
+
+- story: find latest team match path
+  steps:
+  - intent: get_score
+  - action: team_1_form
+  - active_loop: team_1_form
+  - active_loop: null
+  - action: utter_ask_team_2_needed
+  - intent: deny
+  - action: action_team_latest_game
+
+- story: find latest match up path
+  steps:
+  - intent: get_score
+  - action: team_1_form
+  - active_loop: team_1_form
+  - active_loop: null
+  - action: utter_ask_team_2_needed
+  - intent: affirm
+  - action: team_2_form
+  - active_loop: team_2_form
+  - active_loop: null
+  - action: action_latest_match_up
+  
+- story: tell stats leaders
+  steps:
+  - intent: get_stats_leaders
+  - action: action_get_stats_leaders
+  - active_loop: action_get_stats_leaders
+  - active_loop: null
+  - action: utter_ask_anything_else
+  
+- story: tell scoring leaders
+  steps:
+  - intent: get_scorers
+  - action: action_get_scorers
+  - active_loop: action_get_scorers
+  - active_loop: null
+  - action: utter_ask_anything_else
+  
+- story: tell assists
+  steps:
+  - intent: get_assists
+  - action: action_get_assists
+  - active_loop: action_get_assists
+  - active_loop: null
+  - action: utter_ask_anything_else
+  
+- story: tell scoring leaders
+  steps:
+  - intent: get_rebounds
+  - action: action_get_rebounds
+  - active_loop: action_get_rebounds
+  - active_loop: null
+  - action: utter_ask_anything_else
+
+- story: clear slots
+  steps:
+  - intent: deny
+  - action: action_restart
+  - active_loop: null
